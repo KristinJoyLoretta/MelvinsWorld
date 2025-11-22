@@ -1611,7 +1611,8 @@ body.modal-open {
 @media (max-width: 768px) {
     .modal-content {
         width: 95%;
-        height: 90vh;          /* still fixed to viewport */
+        height: 95vh;          /* taller on mobile */
+        max-height: 95vh;
     }
 
     .modal-body {
@@ -1620,16 +1621,66 @@ body.modal-open {
 
     .modal-left,
     .modal-right {
-        padding: 1rem;
+        padding: 0.75rem;
     }
 
     .modal-left {
-        height: 45%;
+        height: 30%;          /* smaller image area */
+        flex-shrink: 0;
+        min-height: 0;
     }
 
     .modal-right {
-        height: 55%;
+        height: 70%;          /* larger chat area */
         min-height: 0;
+        flex: 1;
+    }
+
+    /* Chat mobile improvements */
+    .chat-header {
+        padding: 0.75rem;
+    }
+
+    .chat-header h3 {
+        font-size: 1rem;      /* smaller header */
+    }
+
+    .chat-messages {
+        padding: 0.75rem;
+        gap: 0.75rem;
+    }
+
+    .message {
+        padding: 0.6rem 0.8rem;
+        font-size: 0.9rem;    /* smaller message text */
+        max-width: 85%;
+    }
+
+    .melvin-thinking {
+        padding: 0.6rem 0.8rem;
+        max-width: 85%;
+    }
+
+    .chat-input-container {
+        padding: 0.75rem;
+    }
+
+    #chat-input {
+        padding: 0.7rem;
+        font-size: 0.9rem;    /* smaller input text */
+    }
+
+    #send-message-btn {
+        padding: 0.7rem 1.2rem;
+        font-size: 0.9rem;    /* smaller button text */
+    }
+
+    .modal-header {
+        padding: 1rem;
+    }
+
+    .modal-header h2 {
+        font-size: 1.2rem;    /* smaller modal title */
     }
 }
 
@@ -1825,6 +1876,43 @@ body.modal-open {
 
     .alert-text {
         font-size: 0.9rem;
+    }
+
+    /* Even smaller chat on very small screens */
+    .modal-content {
+        width: 98%;
+        height: 96vh;
+    }
+
+    .modal-left {
+        height: 25%;          /* even smaller image */
+    }
+
+    .modal-right {
+        height: 75%;          /* even larger chat */
+    }
+
+    .chat-header h3 {
+        font-size: 0.9rem;
+    }
+
+    .message {
+        font-size: 0.85rem;   /* even smaller text */
+        padding: 0.5rem 0.7rem;
+    }
+
+    #chat-input {
+        font-size: 0.85rem;
+        padding: 0.6rem;
+    }
+
+    #send-message-btn {
+        font-size: 0.85rem;
+        padding: 0.6rem 1rem;
+    }
+
+    .modal-header h2 {
+        font-size: 1.1rem;
     }
 }
 
