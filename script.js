@@ -293,14 +293,29 @@ class MelvinsWorld {
     }
 
     bindEvents() {
-        // Camera monitor clicks
+        // Camera monitor clicks - make entire monitor clickable on mobile
         const cameraMonitors = document.querySelectorAll('.camera-monitor');
         cameraMonitors.forEach(monitor => {
+            // Make entire monitor clickable, but don't trigger if clicking the button itself
             monitor.addEventListener('click', (e) => {
+                // If clicking the button, let it handle the click normally
                 if (e.target.classList.contains('view-btn')) {
+                    e.stopPropagation();
+                    this.openRoomModal(monitor.dataset.room);
+                } else {
+                    // If clicking anywhere else on the monitor, open the modal
                     this.openRoomModal(monitor.dataset.room);
                 }
             });
+            
+            // Also keep button click handler for desktop users
+            const viewBtn = monitor.querySelector('.view-btn');
+            if (viewBtn) {
+                viewBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    this.openRoomModal(monitor.dataset.room);
+                });
+            }
         });
 
         // Modal close

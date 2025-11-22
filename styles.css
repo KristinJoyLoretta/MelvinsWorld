@@ -2,6 +2,10 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -webkit-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    text-size-adjust: 100%;
 }
 
 body {
@@ -98,6 +102,7 @@ body::before {
     padding: 2rem;
     gap: 3rem;
     overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 .intro-snow-layer {
@@ -1015,6 +1020,8 @@ body::before {
             rgba(196, 30, 58, 0.1) 2px,
             rgba(196, 30, 58, 0.1) 4px
         );
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(196, 30, 58, 0.3);
 }
 
 .camera-monitor::before {
@@ -1628,56 +1635,72 @@ body.modal-open {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    /* Intro Screen Mobile Fixes */
+    #intro-screen {
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
     #intro-screen .intro-wrapper {
         flex-direction: column;
-        padding: 1rem;
+        padding: 1rem 0.75rem;
         gap: 1.5rem;
+        min-height: 100vh;
+        height: auto;
         overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
     }
 
     #intro-screen .intro-scene,
     #intro-screen .intro-ui-card {
         width: 100%;
         max-width: none;
+        flex-shrink: 0;
     }
 
     #intro-screen .intro-scene {
         height: 35vh;
-        min-height: 280px;
-        padding: 1rem 1rem 1.5rem;
+        min-height: 250px;
+        max-height: 350px;
+        padding: 0.75rem 0.75rem 1.25rem;
     }
 
     #intro-screen .intro-ui-card {
         min-height: auto;
         padding: 1.5rem 1.2rem 1.8rem;
+        margin-bottom: 1rem;
     }
 
     .intro-title-text {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
+        line-height: 1.2;
     }
 
     .intro-description {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
+        line-height: 1.5;
     }
 
     .intro-chaos-strip {
         gap: 0.5rem;
+        flex-wrap: wrap;
     }
 
     .intro-chaos-item {
-        font-size: 0.75rem;
-        padding: 0.4rem 0.7rem;
+        font-size: 0.7rem;
+        padding: 0.35rem 0.6rem;
     }
 
     .intro-primary-btn {
         width: 100%;
         font-size: 0.9rem;
         padding: 0.85rem 1.5rem;
+        min-height: 44px; /* Better touch target */
     }
 
     .intro-village {
-        gap: 0.5rem;
-        padding: 0 0.5rem 1rem;
+        gap: 0.4rem;
+        padding: 0 0.4rem 1rem;
     }
 
     .intro-house {
@@ -1685,14 +1708,14 @@ body.modal-open {
     }
 
     .intro-moon {
-        width: 50px;
-        height: 50px;
-        top: 6%;
-        right: 8%;
+        width: 45px;
+        height: 45px;
+        top: 5%;
+        right: 6%;
     }
 
     .intro-lamppost {
-        width: 6%;
+        width: 5%;
     }
 
     .intro-lamppost-left {
@@ -1704,23 +1727,104 @@ body.modal-open {
     }
 
     .intro-flying-elf {
-        width: 40px;
-        height: 40px;
-        top: 20%;
+        width: 35px;
+        height: 35px;
+        top: 18%;
+    }
+
+    .intro-sky-banner {
+        font-size: 0.9rem;
+    }
+
+    .banner-letter {
+        font-size: 1rem;
+    }
+
+    /* Dashboard Mobile Fixes */
+    .christmas-header {
+        padding: 0.75rem 1rem;
     }
 
     .dashboard-title {
-        font-size: 1.8rem;
+        font-size: 1.5rem;
+        line-height: 1.2;
+        padding: 0 0.5rem;
     }
     
     .camera-grid {
         grid-template-columns: 1fr;
-        padding: 1rem;
+        padding: 1rem 0.75rem;
+        gap: 1rem;
+    }
+
+    .camera-monitor {
+        cursor: pointer; /* Show it's clickable */
+        -webkit-tap-highlight-color: rgba(196, 30, 58, 0.3);
+    }
+
+    .camera-monitor:active {
+        transform: scale(0.98);
+    }
+    
+    .camera-feed {
+        height: 220px;
+        min-height: 220px;
+    }
+
+    .view-btn {
+        width: 100%;
+        min-height: 44px; /* Better touch target */
+        font-size: 0.9rem;
     }
     
     .system-status {
         flex-direction: column;
         gap: 0.5rem;
+        padding: 1rem;
+    }
+
+    .status-item {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .alert-text {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+    }
+}
+
+/* Extra small mobile devices */
+@media (max-width: 480px) {
+    #intro-screen .intro-scene {
+        height: 30vh;
+        min-height: 200px;
+        max-height: 280px;
+    }
+
+    .intro-title-text {
+        font-size: 1.3rem;
+    }
+
+    .intro-description {
+        font-size: 0.8rem;
+    }
+
+    .dashboard-title {
+        font-size: 1.2rem;
+    }
+
+    .camera-feed {
+        height: 180px;
+        min-height: 180px;
+    }
+
+    .christmas-header {
+        padding: 0.5rem 0.75rem;
+    }
+
+    .alert-text {
+        font-size: 0.9rem;
     }
 }
 
