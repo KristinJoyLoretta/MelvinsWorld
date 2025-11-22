@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Melvin's World - Security Monitoring</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Fredoka:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app">
+        <!-- Magical Intro Screen -->
+        <div id="intro-screen" class="screen active">
+            <div class="intro-snow-layer"></div>
+            <div class="intro-wrapper">
+                <!-- Establishing Village Scene -->
+                <div class="intro-scene">
+                    <div class="intro-sky-glow"></div>
+                    <div class="intro-moon"></div>
+                    <div class="intro-stars"></div>
+                    
+                    <!-- Flying Elf -->
+                    <div class="intro-flying-elf">
+                        <img src="Melvin/Melvin_standard.png" alt="Flying Melvin" class="elf-image">
+                    </div>
+
+                    <!-- Christmas Sky Banner -->
+                    <div class="intro-sky-banner">
+                        <span class="banner-letter">M</span>
+                        <span class="banner-letter">E</span>
+                        <span class="banner-letter">L</span>
+                        <span class="banner-letter">V</span>
+                        <span class="banner-letter">I</span>
+                        <span class="banner-letter">N</span>
+                        <span class="banner-letter">'</span>
+                        <span class="banner-letter">S</span>
+                        <span class="banner-space"></span>
+                        <span class="banner-letter">S</span>
+                        <span class="banner-letter">E</span>
+                        <span class="banner-letter">C</span>
+                        <span class="banner-letter">U</span>
+                        <span class="banner-letter">R</span>
+                        <span class="banner-letter">I</span>
+                        <span class="banner-letter">T</span>
+                        <span class="banner-letter">Y</span>
+                        <span class="banner-space"></span>
+                        <span class="banner-letter">H</span>
+                        <span class="banner-letter">Q</span>
+                    </div>
+
+                    <div class="intro-village">
+                        <div class="intro-house intro-house-left">
+                            <div class="intro-roof"></div>
+                            <div class="intro-house-body"></div>
+                            <div class="intro-window intro-window-left"></div>
+                            <div class="intro-window intro-window-right"></div>
+                            <div class="intro-door"></div>
+                            <div class="intro-string-lights"></div>
+                        </div>
+
+                        <div class="intro-house intro-hq-house">
+                            <div class="intro-roof hq-roof"></div>
+                            <div class="intro-house-body hq-body"></div>
+                            <div class="intro-window intro-window-center glow"></div>
+                            <div class="intro-door hq-door"></div>
+                            <div class="intro-string-lights hq-lights"></div>
+                            <div class="intro-bulb-flicker"></div>
+                        </div>
+
+                        <div class="intro-house intro-house-right">
+                            <div class="intro-roof"></div>
+                            <div class="intro-house-body"></div>
+                            <div class="intro-window intro-window-left"></div>
+                            <div class="intro-window intro-window-right"></div>
+                            <div class="intro-door"></div>
+                            <div class="intro-string-lights"></div>
+                        </div>
+
+                        <div class="intro-lamppost intro-lamppost-left">
+                            <div class="intro-candy-cane"></div>
+                            <div class="intro-lamp-glow"></div>
+                        </div>
+                        <div class="intro-lamppost intro-lamppost-right">
+                            <div class="intro-candy-cane"></div>
+                            <div class="intro-lamp-glow"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Floating Welcome UI -->
+                <div class="intro-ui-card">
+                    <div class="intro-title-area">
+                        <div class="intro-title-sparkles"></div>
+                        <h1 class="intro-title-text">WELCOME TO<br> MELVIN'S WORLD</h1>
+                    </div>
+                    <p class="intro-description">
+                        Log into our enchanted security camera to see how Melvin, our mischievous elf,
+                        causes chaos leading into Christmas! When Melvin strikes, you'll get an alert.
+                        Click the security camera playback to watch what happened… then chat with him
+                        about his mess!
+                    </p>
+
+                    <div class="intro-chaos-strip">
+                        <div class="intro-chaos-item ornaments">
+                            <div class="chaos-icon"></div>
+                            <span>Ornaments tumbling</span>
+                        </div>
+                        <div class="intro-chaos-item lights">
+                            <div class="chaos-icon"></div>
+                            <span>Lights tangled</span>
+                        </div>
+                        <div class="intro-chaos-item cookies">
+                            <div class="chaos-icon"></div>
+                            <span>Bathroom Chaos</span>
+                        </div>
+                        <div class="intro-chaos-item presents">
+                            <div class="chaos-icon"></div>
+                            <span>Grinchy Decorations</span>
+                        </div>
+                    </div>
+
+                    <button id="enter-hq-btn" class="intro-primary-btn">
+                        Enter Melvin's Security HQ
+                    </button>
+
+                    <!-- About Section -->
+                    <div class="intro-about-card">
+                        <h2 class="intro-about-title">ABOUT</h2>
+                        <p class="intro-about-text">
+                            Melvin’s World was created by Oliver and Logan Fustar, twin boys who are 7 years old and are very cool.
+                            Our elf is always up to no good, and we wanted to share his adventures with you!
+                        </p>
+                        <p class="intro-about-signoff">
+                            “Enter at your own risk… Melvin has already been here.”
+                        </p>
+                        <div class="intro-footprints-trail"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Security Camera Dashboard -->
+        <div id="dashboard" class="screen">
+            <!-- Christmas Header -->
+            <div class="christmas-header">
+                <div class="snow-container">
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                    <div class="snow"></div>
+                </div>
+                <h1 class="dashboard-title">🎄 Melvin's World Security System 🎄</h1>
+                <div class="christmas-lights">
+                    <span class="light red"></span>
+                    <span class="light green"></span>
+                    <span class="light blue"></span>
+                    <span class="light yellow"></span>
+                    <span class="light red"></span>
+                    <span class="light green"></span>
+                    <span class="light blue"></span>
+                    <span class="light yellow"></span>
+                </div>
+            </div>
+
+            <!-- Alert Ticker -->
+            <div class="alert-ticker">
+                <div class="ticker-container">
+                    <div class="ticker-content" id="ticker-content">
+                        <span class="alert-text" id="ticker-text">🚨 ALERT: Melvin is in the Living Room! 🚨</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Security Camera Grid -->
+            <div class="camera-grid">
+                <div class="camera-monitor" data-room="living-room">
+                    <div class="camera-header">
+                        <h3>Living Room</h3>
+                        <div class="camera-status">
+                            <span class="status-dot active"></span>
+                            <span class="status-text">LIVE</span>
+                        </div>
+                    </div>
+                    <div class="camera-feed">
+                        <img src="Rooms/living-room.png" alt="Living Room Camera" class="room-image">
+                        <div class="prank-overlay" id="living-room-prank"></div>
+                        <div class="melvin-overlay" id="living-room-melvin"></div>
+                    </div>
+                    <div class="camera-controls">
+                        <button class="view-btn">View Details</button>
+                    </div>
+                </div>
+
+                <div class="camera-monitor" data-room="bedroom">
+                    <div class="camera-header">
+                        <h3>Bedroom</h3>
+                        <div class="camera-status">
+                            <span class="status-dot active"></span>
+                            <span class="status-text">LIVE</span>
+                        </div>
+                    </div>
+                    <div class="camera-feed">
+                        <img src="Rooms/Bedroom.png" alt="Bedroom Camera" class="room-image">
+                        <div class="prank-overlay" id="bedroom-prank"></div>
+                        <div class="melvin-overlay" id="bedroom-melvin"></div>
+                    </div>
+                    <div class="camera-controls">
+                        <button class="view-btn">View Details</button>
+                    </div>
+                </div>
+
+                <div class="camera-monitor" data-room="bathroom">
+                    <div class="camera-header">
+                        <h3>Bathroom</h3>
+                        <div class="camera-status">
+                            <span class="status-dot active"></span>
+                            <span class="status-text">LIVE</span>
+                        </div>
+                    </div>
+                    <div class="camera-feed">
+                        <img src="Rooms/bathroom.png" alt="Bathroom Camera" class="room-image">
+                        <div class="prank-overlay" id="bathroom-prank"></div>
+                        <div class="melvin-overlay" id="bathroom-melvin"></div>
+                    </div>
+                    <div class="camera-controls">
+                        <button class="view-btn">View Details</button>
+                    </div>
+                </div>
+
+                <div class="camera-monitor" data-room="dining-room">
+                    <div class="camera-header">
+                        <h3>Dining Room</h3>
+                        <div class="camera-status">
+                            <span class="status-dot active"></span>
+                            <span class="status-text">LIVE</span>
+                        </div>
+                    </div>
+                    <div class="camera-feed">
+                        <img src="Rooms/dining-room.png" alt="Dining Room Camera" class="room-image">
+                        <div class="prank-overlay" id="dining-room-prank"></div>
+                        <div class="melvin-overlay" id="dining-room-melvin"></div>
+                    </div>
+                    <div class="camera-controls">
+                        <button class="view-btn">View Details</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- System Status -->
+            <div class="system-status">
+                <div class="status-item">
+                    <span class="status-icon">🎯</span>
+                    <span class="status-label">Melvin's Location:</span>
+                    <span class="status-value" id="melvin-location">Unknown</span>
+                </div>
+                <div class="status-item">
+                    <span class="status-icon">🎄</span>
+                    <span class="status-label">Christmas Spirit:</span>
+                    <span class="status-value">Maximum Chaos</span>
+                </div>
+                <div class="status-item">
+                    <span class="status-icon">⏰</span>
+                    <span class="status-label">Last Activity:</span>
+                    <span class="status-value" id="last-activity">Just now</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Room Detail Modal -->
+    <div id="room-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-room-title">Room Details</h2>
+                <button class="close-modal" id="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-left">
+                    <div class="room-detail-view">
+                        <img id="modal-room-image" src="" alt="Room View" class="detail-room-image">
+                        <div class="prank-detail" id="prank-detail"></div>
+                        <div class="melvin-detail" id="melvin-detail"></div>
+                    </div>
+                </div>
+                <div class="modal-right">
+                    <div class="chat-container">
+                        <div class="chat-header">
+                            <h3>Chat with Melvin</h3>
+                            <div class="melvin-avatar">
+                                <img id="melvin-chat-avatar" src="Melvin/Melvin_standard.png" alt="Melvin">
+                            </div>
+                        </div>
+                        <div class="chat-messages" id="chat-messages">
+                            <!-- Messages will be added here -->
+                        </div>
+                        <div class="chat-input-container">
+                            <input type="text" id="chat-input" placeholder="Type your message..." maxlength="100" autocomplete="on" autocorrect="on" autocapitalize="sentences" spellcheck="true">
+                            <button id="send-message-btn">Send</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- API key is now stored securely on the server via environment variables -->
+    <!-- No API key needed in the frontend code -->
+
+    <script src="script.js"></script>
+</body>
+</html> 
