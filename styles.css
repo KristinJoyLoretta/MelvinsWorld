@@ -1624,19 +1624,31 @@ body.modal-open {
         padding: 0.75rem;
     }
 
+    .room-detail-view {
+        height: 100%;
+        max-height: 100%;
+    }
+
+    .detail-room-image {
+        object-fit: contain;
+        max-height: 100%;
+    }
+
     .modal-left {
-        height: 12%;          /* much smaller image area to make room for taller chat */
+        height: 6%;          /* 50% smaller image area (was 12%, now 6%) */
         flex-shrink: 0;
         min-height: 0;
+        padding: 0.5rem;
     }
 
     .modal-right {
-        height: 88%;          /* 30% taller chat area (was 80%, now 88% = 80% * 1.1, but actually more space) */
+        height: 94%;          /* 50% bigger chat area (was 88%, now 94% - takes freed space from image) */
         min-height: 0;
         flex: 1;
         display: flex;
         flex-direction: column;
         overflow: hidden;
+        padding-top: 0.5rem;  /* Move chat up */
     }
 
     /* Chat mobile improvements - 30% smaller fonts */
@@ -1691,11 +1703,12 @@ body.modal-open {
     }
 
     .modal-header {
-        padding: 1rem;
+        padding: 0.75rem;     /* Smaller header to give more space to chat */
+        flex-shrink: 0;
     }
 
     .modal-header h2 {
-        font-size: 1.2rem;    /* smaller modal title */
+        font-size: 1rem;      /* Smaller modal title */
     }
 
     .melvin-avatar img {
@@ -1905,14 +1918,16 @@ body.modal-open {
     }
 
     .modal-left {
-        height: 10%;          /* even smaller image */
+        height: 5%;          /* 50% smaller image (was 10%, now 5%) */
+        padding: 0.4rem;
     }
 
     .modal-right {
-        height: 90%;          /* even larger chat - 30% taller */
+        height: 95%;          /* 50% bigger chat (was 90%, now 95% - takes freed space) */
         display: flex;
         flex-direction: column;
         overflow: hidden;
+        padding-top: 0.4rem;  /* Move chat up */
     }
 
     .chat-messages {
