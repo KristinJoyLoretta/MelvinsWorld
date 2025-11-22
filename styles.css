@@ -1657,7 +1657,8 @@ body.modal-open {
     }
 
     .chat-header h3 {
-        font-size: 0.7rem;      /* 30% smaller */
+        font-size: 1rem;        /* Larger, more readable header */
+        font-weight: 600;
     }
 
     .chat-messages {
@@ -1672,34 +1673,69 @@ body.modal-open {
     }
 
     .message {
-        padding: 0.6rem 0.8rem;
-        font-size: 0.7rem;    /* 30% smaller (base ~1rem, so 0.7rem) */
+        padding: 0.85rem 1rem;    /* More padding for easier reading */
+        font-size: 0.95rem;        /* Larger, more readable text (was 0.7rem) */
         max-width: 85%;
-        line-height: 1.4;
+        line-height: 1.6;          /* Better line spacing for readability */
+        font-weight: 500;          /* Slightly bolder for better contrast */
+    }
+
+    .message.melvin {
+        background: linear-gradient(135deg, #4CAF50, #45a049);
+        box-shadow: 0 2px 4px rgba(0,0,0,0.2);  /* Better visibility */
+    }
+
+    .message.user {
+        background: linear-gradient(135deg, #2196F3, #1976D2);
+        box-shadow: 0 2px 4px rgba(0,0,0,0.2);  /* Better visibility */
     }
 
     .melvin-thinking {
-        padding: 0.6rem 0.8rem;
+        padding: 0.85rem 1rem;
         max-width: 85%;
     }
 
     .melvin-thinking-dot {
-        width: 6px;
-        height: 6px;
+        width: 7px;
+        height: 7px;
+    }
+
+    .chat-messages {
+        gap: 1rem;                  /* More space between messages */
     }
 
     .chat-input-container {
-        padding: 0.75rem;
+        padding: 1rem;              /* More padding around input */
+        background: rgba(0,0,0,0.3); /* Better contrast for input area */
+        border-top: 2px solid #444;
     }
 
     #chat-input {
-        padding: 0.7rem;
-        font-size: 0.7rem;    /* 30% smaller */
+        padding: 1rem;               /* Larger touch target */
+        font-size: 16px;             /* Minimum 16px to prevent zoom */
+        background: rgba(255,255,255,0.15); /* More visible background */
+        border: 2px solid rgba(255,255,255,0.2); /* More visible border */
+        font-weight: 500;            /* Slightly bolder text */
+        min-height: 48px;            /* Better touch target */
+    }
+
+    #chat-input:focus {
+        background: rgba(255,255,255,0.2); /* Even more visible when focused */
+        border-color: #4CAF50;
+        box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.3);
+    }
+
+    #chat-input::placeholder {
+        color: rgba(255,255,255,0.6); /* More visible placeholder */
+        font-weight: 400;
     }
 
     #send-message-btn {
-        padding: 0.7rem 1.2rem;
-        font-size: 0.7rem;    /* 30% smaller */
+        padding: 1rem 1.5rem;        /* Larger button for easier tapping */
+        font-size: 1rem;             /* Larger, more readable button text */
+        font-weight: 600;            /* Bolder text */
+        min-height: 48px;            /* Better touch target */
+        min-width: 80px;             /* Ensure button is large enough */
     }
 
     .modal-header {
@@ -1939,23 +1975,31 @@ body.modal-open {
     }
 
     .chat-header h3 {
-        font-size: 0.65rem;   /* 30% smaller */
+        font-size: 0.95rem;   /* Larger, more readable header */
+        font-weight: 600;
     }
 
     .message {
-        font-size: 0.65rem;   /* 30% smaller */
-        padding: 0.5rem 0.7rem;
-        line-height: 1.4;
+        font-size: 0.9rem;    /* Larger, more readable (was 0.65rem) */
+        padding: 0.8rem 0.9rem;
+        line-height: 1.6;     /* Better line spacing */
+        font-weight: 500;
     }
 
     #chat-input {
-        font-size: 0.65rem;   /* 30% smaller */
-        padding: 0.6rem;
+        font-size: 16px;      /* Minimum 16px to prevent zoom on iOS/Android */
+        padding: 0.9rem;     /* Larger touch target */
+        min-height: 48px;
+        background: rgba(255,255,255,0.15);
+        border: 2px solid rgba(255,255,255,0.2);
     }
 
     #send-message-btn {
-        font-size: 0.65rem;   /* 30% smaller */
-        padding: 0.6rem 1rem;
+        font-size: 0.95rem;  /* Larger, more readable button text */
+        padding: 0.9rem 1.3rem;
+        min-height: 48px;
+        min-width: 75px;
+        font-weight: 600;
     }
 
     .modal-header h2 {
