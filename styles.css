@@ -1625,24 +1625,24 @@ body.modal-open {
     }
 
     .modal-left {
-        height: 30%;          /* smaller image area */
+        height: 20%;          /* much smaller image area */
         flex-shrink: 0;
         min-height: 0;
     }
 
     .modal-right {
-        height: 70%;          /* larger chat area */
+        height: 80%;          /* much larger chat area - double the size */
         min-height: 0;
         flex: 1;
     }
 
-    /* Chat mobile improvements */
+    /* Chat mobile improvements - 30% smaller fonts */
     .chat-header {
         padding: 0.75rem;
     }
 
     .chat-header h3 {
-        font-size: 1rem;      /* smaller header */
+        font-size: 0.7rem;      /* 30% smaller */
     }
 
     .chat-messages {
@@ -1652,13 +1652,19 @@ body.modal-open {
 
     .message {
         padding: 0.6rem 0.8rem;
-        font-size: 0.9rem;    /* smaller message text */
+        font-size: 0.7rem;    /* 30% smaller (base ~1rem, so 0.7rem) */
         max-width: 85%;
+        line-height: 1.4;
     }
 
     .melvin-thinking {
         padding: 0.6rem 0.8rem;
         max-width: 85%;
+    }
+
+    .melvin-thinking-dot {
+        width: 6px;
+        height: 6px;
     }
 
     .chat-input-container {
@@ -1667,12 +1673,12 @@ body.modal-open {
 
     #chat-input {
         padding: 0.7rem;
-        font-size: 0.9rem;    /* smaller input text */
+        font-size: 0.7rem;    /* 30% smaller */
     }
 
     #send-message-btn {
         padding: 0.7rem 1.2rem;
-        font-size: 0.9rem;    /* smaller button text */
+        font-size: 0.7rem;    /* 30% smaller */
     }
 
     .modal-header {
@@ -1681,6 +1687,11 @@ body.modal-open {
 
     .modal-header h2 {
         font-size: 1.2rem;    /* smaller modal title */
+    }
+
+    .melvin-avatar img {
+        width: 30px;
+        height: 30px;
     }
 }
 
@@ -1885,34 +1896,40 @@ body.modal-open {
     }
 
     .modal-left {
-        height: 25%;          /* even smaller image */
+        height: 15%;          /* even smaller image */
     }
 
     .modal-right {
-        height: 75%;          /* even larger chat */
+        height: 85%;          /* even larger chat - double the size */
     }
 
     .chat-header h3 {
-        font-size: 0.9rem;
+        font-size: 0.65rem;   /* 30% smaller */
     }
 
     .message {
-        font-size: 0.85rem;   /* even smaller text */
+        font-size: 0.65rem;   /* 30% smaller */
         padding: 0.5rem 0.7rem;
+        line-height: 1.4;
     }
 
     #chat-input {
-        font-size: 0.85rem;
+        font-size: 0.65rem;   /* 30% smaller */
         padding: 0.6rem;
     }
 
     #send-message-btn {
-        font-size: 0.85rem;
+        font-size: 0.65rem;   /* 30% smaller */
         padding: 0.6rem 1rem;
     }
 
     .modal-header h2 {
         font-size: 1.1rem;
+    }
+
+    .melvin-avatar img {
+        width: 28px;
+        height: 28px;
     }
 }
 
